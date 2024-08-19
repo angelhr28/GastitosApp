@@ -1,0 +1,25 @@
+[versions]
+activity-compose-version = "1.9.1"
+appcompat-version = "1.7.0"
+core-ktx-version = "1.13.1"
+firebase-bom-version = "33.1.2"
+firebase-version = "1.13.0"
+ktx-serialization-version = "1.6.0"
+kotlin-plugin-serialization-version = "1.9.22"
+
+[libraries]
+activity-compose = { module = "androidx.activity:activity-compose", version.ref = "activity-compose-version" }
+appcompat = { module = "androidx.appcompat:appcompat", version.ref = "appcompat-version" }
+core-ktx = { module = "androidx.core:core-ktx", version.ref = "core-ktx-version" }
+firebase-bom = { module = "com.google.firebase:firebase-bom", version.ref = "firebase-bom-version" }
+firebase-firestore = { module = "dev.gitlive:firebase-firestore", version.ref = "firebase-version" }
+firebase-common = { module = "dev.gitlive:firebase-common", version.ref = "firebase-version" }
+ktx-serialization = { module = "org.jetbrains.kotlinx:kotlinx-serialization-json", version.ref = "ktx-serialization-version" }
+
+[plugins]
+kotlin-multiplatform = { id = "org.jetbrains.kotlin.multiplatform" }
+android-library = { id = "com.android.library" }
+jetbrains-compose = { id = "org.jetbrains.compose" }
+kotlin-plugin-serialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlin-plugin-serialization-version" }
+
+[bundles]

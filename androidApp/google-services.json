@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "362175514319",
+    "project_id": "gastitosapps",
+    "storage_bucket": "gastitosapps.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:362175514319:android:979c5d5b74aa34ccfa59ba",
+        "android_client_info": {
+          "package_name": "org.angelhr28.gastitosapp.GastitosApp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA4ywqRC3dGIX1A3y_c2ThyXL0WUN_afNY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

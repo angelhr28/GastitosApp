@@ -2,6 +2,7 @@ plugins {
     kotlin("multiplatform")
     id("com.android.library")
     id("org.jetbrains.compose")
+    kotlin("plugin.serialization") version "1.9.0" // This line
 }
 
 kotlin {
@@ -26,13 +27,16 @@ kotlin {
                 implementation(compose.material)
                 @OptIn(org.jetbrains.compose.ExperimentalComposeLibrary::class)
                 implementation(compose.components.resources)
+                implementation(libs.firebase.firestore)
+                implementation(libs.firebase.common)
+                implementation(libs.ktx.serialization)
             }
         }
         val androidMain by getting {
             dependencies {
-                api("androidx.activity:activity-compose:1.7.2")
-                api("androidx.appcompat:appcompat:1.6.1")
-                api("androidx.core:core-ktx:1.10.1")
+                api(libs.activity.compose)
+                api(libs.appcompat)
+                api(libs.core.ktx)
             }
         }
         val iosX64Main by getting
@@ -49,7 +53,7 @@ kotlin {
 
 android {
     compileSdk = (findProperty("android.compileSdk") as String).toInt()
-    namespace = "com.myapplication.common"
+    namespace = "org.angelhr28.gastitosapp.common"
 
     sourceSets["main"].manifest.srcFile("src/androidMain/AndroidManifest.xml")
     sourceSets["main"].res.srcDirs("src/androidMain/res")
